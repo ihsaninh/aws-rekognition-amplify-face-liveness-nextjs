@@ -41,6 +41,7 @@ function ReferenceImage({ faceLivenessAnalysis }) {
               height="100%"
               objectFit="cover"
               objectPosition="50% 50%"
+              alt="image reference"
           />
       </>
   );
