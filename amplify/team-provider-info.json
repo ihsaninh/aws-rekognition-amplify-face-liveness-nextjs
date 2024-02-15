@@ -1,25 +1,24 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-amplifyuidemo-dev-90055-authRole",
-      "UnauthRoleArn": "arn:aws:iam::590183879421:role/amplify-amplifyuidemo-dev-90055-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::590183879421:role/amplify-amplifyuidemo-dev-90055-authRole",
+      "AuthRoleName": "amplify-amplifyuidemo-dev-105719-authRole",
+      "UnauthRoleArn": "arn:aws:iam::590183879421:role/amplify-amplifyuidemo-dev-105719-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::590183879421:role/amplify-amplifyuidemo-dev-105719-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-amplifyuidemo-dev-90055-deployment",
-      "UnauthRoleName": "amplify-amplifyuidemo-dev-90055-unauthRole",
-      "StackName": "amplify-amplifyuidemo-dev-90055",
-      "StackId": "arn:aws:cloudformation:us-east-1:590183879421:stack/amplify-amplifyuidemo-dev-90055/10c6fcb0-cba6-11ee-a190-12763f884d1d",
-      "AmplifyAppId": "d2bvmslxstc4w4",
-      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-amplifyuidemo-dev-90055-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+      "DeploymentBucketName": "amplify-amplifyuidemo-dev-105719-deployment",
+      "UnauthRoleName": "amplify-amplifyuidemo-dev-105719-unauthRole",
+      "StackName": "amplify-amplifyuidemo-dev-105719",
+      "StackId": "arn:aws:cloudformation:us-east-1:590183879421:stack/amplify-amplifyuidemo-dev-105719/537420f0-cbb6-11ee-8782-0e8a6a332303",
+      "AmplifyAppId": "d3kf3ugreilk2d"
     },
     "categories": {
       "auth": {
-        "amplifyuidemo526ecf3f": {}
+        "amplifyuidemo0fa3c171": {}
       },
       "function": {
         "liveness": {
-          "deploymentBucketName": "amplify-amplifyuidemo-dev-90055-deployment",
-          "s3Key": "amplify-builds/liveness-475a762b446d6271662f-build.zip"
+          "deploymentBucketName": "amplify-amplifyuidemo-dev-105719-deployment",
+          "s3Key": "amplify-builds/liveness-356b504a30653459336e-build.zip"
         }
       },
       "api": {

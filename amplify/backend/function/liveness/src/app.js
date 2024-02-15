@@ -26,6 +26,7 @@ app.use(function(req, res, next) {
   next()
 });
 
+
 app.get("/session/create", async function (req, res) {
   const rekognition = getRekognitionClient();
   const response = await rekognition.createFaceLivenessSession({});
@@ -43,11 +44,8 @@ app.get("/session/get", async function (req, res) {
 
   const isLive = response.Confidence > 90;
 
-  res.status(200).json({ 
-    isLive,
-    response: response
-  });
-})
+  res.status(200).json({ isLive, response });
+});
 
 app.listen(3000, function() {
     console.log("App started")

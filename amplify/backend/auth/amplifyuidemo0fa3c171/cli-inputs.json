@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "amplifyuidemo526ecf3f_identitypool_526ecf3f",
+    "identityPoolName": "amplifyuidemo0fa3c171_identitypool_0fa3c171",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "amplif526ecf3f",
-    "userPoolName": "amplifyuidemo526ecf3f_userpool_526ecf3f",
+    "resourceNameTruncated": "amplif0fa3c171",
+    "userPoolName": "amplifyuidemo0fa3c171_userpool_0fa3c171",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -15,7 +15,7 @@
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
     "emailVerificationSubject": "Your verification code",
-    "emailVerificationMessage": "Your verification code is {####}",
+    "emailVerificationMessage": "{####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
@@ -31,12 +31,12 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "amplif526ecf3f_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "amplif0fa3c171_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "526ecf3f",
-    "resourceName": "amplifyuidemo526ecf3f",
+    "sharedId": "0fa3c171",
+    "resourceName": "amplifyuidemo0fa3c171",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "default",
+    "useDefault": "manual",
     "usernameAttributes": [
       "email"
     ],
@@ -57,6 +57,16 @@
       ]
     },
     "breakCircularDependency": true,
-    "dependsOn": []
+    "dependsOn": [],
+    "thirdPartyAuth": false,
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "triggers": {},
+    "hostedUI": false,
+    "authProviders": [],
+    "parentStack": {
+      "Ref": "AWS::StackId"
+    },
+    "permissions": []
   }
 }

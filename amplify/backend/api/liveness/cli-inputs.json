@@ -5,19 +5,7 @@
       "name": "/session",
       "lambdaFunction": "liveness",
       "permissions": {
-        "setting": "protected",
-        "auth": [
-          "create",
-          "read",
-          "update",
-          "delete"
-        ],
-        "guest": [
-          "create",
-          "read",
-          "update",
-          "delete"
-        ]
+        "setting": "open"
       }
     }
   }
