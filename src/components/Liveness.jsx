@@ -1,19 +1,22 @@
 import { useEffect, useState } from "react";
-import { Loader, Heading } from "@aws-amplify/ui-react";
+import {
+  Loader,
+} from "@aws-amplify/ui-react";
 import { FaceLivenessDetector } from "@aws-amplify/ui-react-liveness";
-import { get } from 'aws-amplify/api';
+import { get } from "aws-amplify/api";
+import ReferenceImage from "./ReferenceImage";
 
 export function LivenessQuickStart() {
   const [loading, setLoading] = useState(true);
   const [sessionId, setSessionId] = useState(null);
-  const [success, setSuccess] = useState('');
+  const [faceLivenessAnalysis, setFaceLivenessAnalysis] = useState(null);
 
   useEffect(() => {
     const fetchCreateLiveness = async () => {
       const response = await get({
         apiName: "liveness",
         path: "/session/create",
-      }).response
+      }).response;
       const data = await response.body.json();
       setSessionId(data.sessionId);
       setLoading(false);
@@ -23,27 +26,17 @@ export function LivenessQuickStart() {
   }, []);
 
   const handleAnalysisComplete = async () => {
-    console.log("masuk kesini ga sih")
-    const response = await get({ 
-      apiName: 'liveness',
-      path: '/session/get',
+    const response = await get({
+      apiName: "liveness",
+      path: "/session/get",
       options: {
         queryParams: {
-          sessionId: sessionId
-        }
-      }
+          sessionId: sessionId,
+        },
+      },
     }).response;
-    const data = await response.body.json()
-    console.log(data);
-
-    if (data.isLive) {
-      console.log(data)
-      setSuccess("User is live");
-      console.log("live");
-    } else {
-      setSuccess("User is not live");
-      console.log("not live");
-    }
+    const data = await response.body.json();
+    setFaceLivenessAnalysis(data.response);
   };
 
   const handleError = (error) => {
@@ -53,6 +46,10 @@ export function LivenessQuickStart() {
     <>
       {loading ? (
         <Loader />
+      ) : faceLivenessAnalysis ? (
+        <ReferenceImage
+          faceLivenessAnalysis={faceLivenessAnalysis}
+        ></ReferenceImage>
       ) : (
         <>
           <FaceLivenessDetector
@@ -61,7 +58,6 @@ export function LivenessQuickStart() {
             onAnalysisComplete={handleAnalysisComplete}
             onError={handleError}
           />
-          <Heading level={2}>{success}</Heading>
         </>
       )}
     </>

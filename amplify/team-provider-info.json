@@ -18,7 +18,7 @@
       "function": {
         "liveness": {
           "deploymentBucketName": "amplify-amplifyuidemo-dev-105719-deployment",
-          "s3Key": "amplify-builds/liveness-356b504a30653459336e-build.zip"
+          "s3Key": "amplify-builds/liveness-38555058375364306167-build.zip"
         }
       },
       "api": {

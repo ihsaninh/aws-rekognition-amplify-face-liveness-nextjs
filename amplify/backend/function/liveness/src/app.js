@@ -42,9 +42,11 @@ app.get("/session/get", async function (req, res) {
     SessionId: req.query.sessionId,
   });
 
-  const isLive = response.Confidence > 90;
+  const referenceImageBuffer = Buffer.from(response.ReferenceImage.Bytes, 'base64');
+  const referenceImageBase64 = referenceImageBuffer.toString('base64');
+  response.ReferenceImage.Bytes = referenceImageBase64;
 
-  res.status(200).json({ isLive, response });
+  res.status(200).json({ response });
 });
 
 app.listen(3000, function() {
