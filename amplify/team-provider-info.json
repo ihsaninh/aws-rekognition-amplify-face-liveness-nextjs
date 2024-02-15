@@ -1,0 +1,30 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyuidemo-dev-90055-authRole",
+      "UnauthRoleArn": "arn:aws:iam::590183879421:role/amplify-amplifyuidemo-dev-90055-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::590183879421:role/amplify-amplifyuidemo-dev-90055-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplifyuidemo-dev-90055-deployment",
+      "UnauthRoleName": "amplify-amplifyuidemo-dev-90055-unauthRole",
+      "StackName": "amplify-amplifyuidemo-dev-90055",
+      "StackId": "arn:aws:cloudformation:us-east-1:590183879421:stack/amplify-amplifyuidemo-dev-90055/10c6fcb0-cba6-11ee-a190-12763f884d1d",
+      "AmplifyAppId": "d2bvmslxstc4w4",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-amplifyuidemo-dev-90055-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "amplifyuidemo526ecf3f": {}
+      },
+      "function": {
+        "liveness": {
+          "deploymentBucketName": "amplify-amplifyuidemo-dev-90055-deployment",
+          "s3Key": "amplify-builds/liveness-475a762b446d6271662f-build.zip"
+        }
+      },
+      "api": {
+        "liveness": {}
+      }
+    }
+  }
+}
